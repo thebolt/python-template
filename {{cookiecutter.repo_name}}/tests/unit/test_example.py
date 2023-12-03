@@ -6,7 +6,8 @@ from {{cookiecutter.import_name}}.example import my_function
 
 
 def test_my_function() -> None:
-    assert my_function() == 42
+    expected_value = 42
+    assert my_function() == expected_value
 
 
 def test_use_test_resource(resource_dir: Path) -> None:

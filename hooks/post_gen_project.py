@@ -5,8 +5,8 @@ from typing import Any, List
 from git import Actor, Repo
 from git.cmd import Git
 
-os.system("isort .")
-os.system("black .")
+os.system("ruff format .")
+os.system("ruff check --fix .")
 
 default_remote_url = (
     "{{ cookiecutter.url }}".replace("https://", "git@").replace(".com/", ".com:")

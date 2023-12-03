@@ -9,7 +9,7 @@ Create a new virtual environment and install necessary dependencies.
 ```
 python3.9 -m venv venv
 source venv/bin/activate
-pip install cruft isort black cookiecutter==1.7.3
+pip install cruft ruff cookiecutter==1.7.3
 ```
 
 > **Note**
@@ -56,17 +56,11 @@ Run `tox run` to execute the test pipeline. The tox pipelines are configured in 
 
 The following tools are part of the test pipeline:
 
-[isort](https://pycqa.github.io/isort/): Automatically sorts your imports.
-
-[black](https://black.readthedocs.io/en/stable/): Automatically and deterministically formats your code.
-
 [mypy](https://mypy.readthedocs.io/en/stable/): Statically checks your type hints.
 
-[pylint](http://pylint.pycqa.org/en/latest/): Statically checks your code for errors and code smells.
+[ruff](https://github.com/astral-sh/ruff): Formats your code, orders your imports, statically checks your code and docstrings for errors and code smells.
 
 [pytest](https://docs.pytest.org/en/): Provides a framework for unit tests. Also doc-tests your docstrings and collects coverage information via pytest-cov.
-
-[pydocstyle](http://www.pydocstyle.org/en/stable/): Checks your docstring style. Use Google style docstrings.
 
 If you don’t want to run the whole test pipeline, you can also use single commands from the pipeline, e.g., `pytest`.
 The tools will automatically pick up the correct configuration from the pyproject.toml file.
