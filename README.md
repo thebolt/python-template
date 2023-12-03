@@ -1,7 +1,6 @@
-# voraus Cookiecutter Template
+# Python Project Template
 
-This is a public fork of the [cookiecutter](https://github.com/cookiecutter/cookiecutter) template used for the Python projects at [voraus robotik](https://vorausrobotik.com/).
-Projects are created and updated via [cruft](https://github.com/cruft/cruft/).
+This is a fork of [voraus-python-template](https://github.com/vorausrobotik/voraus-python-template). It helps to quickly spin up Python projects via [cookiecutter](https://github.com/cookiecutter/cookiecutter) and [cruft](https://github.com/cruft/cruft/).
 
 ## Getting Started
 
