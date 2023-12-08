@@ -1,6 +1,7 @@
 # Python Project Template
 
-This is a fork of [voraus-python-template](https://github.com/vorausrobotik/voraus-python-template). It helps to quickly spin up Python projects via [cookiecutter](https://github.com/cookiecutter/cookiecutter) and [cruft](https://github.com/cruft/cruft/).
+This is a fork of [voraus-python-template](https://github.com/vorausrobotik/voraus-python-template).
+It helps to quickly spin up Python projects via [cookiecutter](https://github.com/cookiecutter/cookiecutter) and [cruft](https://github.com/cruft/cruft/).
 
 ## Getting Started
 
@@ -17,11 +18,11 @@ pip install cruft ruff cookiecutter
 Create a new project with
 
 ```
-cruft create git@github.com:vorausrobotik/voraus-python-template.git
+cruft create git@github.com:Mr-Pepe/python-template.git
 ```
 
 and follow the prompts. The template will ask you for a name and email address to use for the maintainer of the project (the name and email address of your active Git profile is used by default).
-Unless you know what you are doing, you should define a project name, e.g., "voraus Robot Library", and go with the proposed default values.
+Unless you know what you are doing, you should define a project name, e.g., "My Project", and go with the proposed default values.
 Cruft uses [cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.3/installation.html#install-cookiecutter) behind the scenes to generate the project.
 
 

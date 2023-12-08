@@ -63,7 +63,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "Cookiecutter PyPackage"
-copyright = "voraus robotik GmbH"
+copyright = "Max Mustermann"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
