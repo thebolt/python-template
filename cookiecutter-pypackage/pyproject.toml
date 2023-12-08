@@ -1,6 +1,87 @@
 [build-system]
-requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
+requires = ["setuptools>=68", "setuptools_scm[toml]>=8"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "cookiecutter-pypackage"
+authors = [
+    {name = "Max Mustermann", email = "max.mustermann@example.com}"},
+]
+description = "A cookiecutter for Python packages."
+readme = "README.rst"
+urls.Homepage = "https://www.example.com"
+requires-python = ">=3.8"
+dynamic = ["version"]
+dependencies = [
+    "importlib-metadata",
+    # Add runtime dependencies here
+]
+
+[project.optional-dependencies]
+dev = [
+    "cookiecutter-pypackage[tox]",
+    "cookiecutter-pypackage[lint]",
+    "cookiecutter-pypackage[test]",
+    "cookiecutter-pypackage[doc]",
+    "cookiecutter-pypackage[build]",
+]
+lint = [
+    "cookiecutter-pypackage[lint-template]",
+    # Add additional linting dependencies here
+]
+test = [
+    "cookiecutter-pypackage[test-template]",
+    # Add additional testing dependencies here
+]
+doc = [
+    "cookiecutter-pypackage[doc-template]",
+    # Add additional documentation dependencies below this line
+]
+build = [
+    "cookiecutter-pypackage[build-template]",
+    # Add additional build dependencies below this line
+]
+
+###########################################################
+# The following dependencies are managed via the template.#
+# Do not modify them manually to prevent conflicts during #
+# template updates.                                       #
+###########################################################
+
+tox = [
+    "tox==4.11.1",
+]
+lint-template = [
+    "mypy==1.5.1",
+    "pytest==7.4.1",
+    "types-docutils",
+    "types-setuptools",
+    "jinja2==3.1.2",
+    "ruff==0.1.6",
+]
+test-template = [
+    "pytest==7.4.1",
+    "pytest-randomly==3.15.0",
+    "pytest-cov==4.1.0",
+    "coverage[toml]==7.3.1",
+]
+doc-template = [
+    "sphinx==7.2.6",
+    "sphinx_rtd_theme==1.3.0",
+    "sphinx-autodoc-typehints==1.24.0",
+    "pip-licenses==4.3.2",
+    "jinja2==3.1.2",
+]
+build-template = [
+    "build[virtualenv]==1.0.3",
+]
+
+########################################
+# End of template-managed dependencies #
+########################################
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
 
 # Enables the usage of setuptools_scm
 [tool.setuptools_scm]
