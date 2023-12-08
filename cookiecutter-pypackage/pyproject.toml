@@ -15,7 +15,7 @@ src = ["src"]
 extend-exclude = [
     "conf.py",
 ]
-target-version = "py39"
+target-version = "py38"
 select = ["ALL"]
 ignore = [
     "COM812",   # Conflicts with the formatter
