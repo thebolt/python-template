@@ -7,14 +7,10 @@ This is a fork of [voraus-python-template](https://github.com/vorausrobotik/vora
 Create a new virtual environment and install necessary dependencies.
 
 ```
-python3.9 -m venv venv
+python -m venv venv
 source venv/bin/activate
-pip install cruft ruff cookiecutter==1.7.3
+pip install cruft ruff cookiecutter
 ```
-
-> **Note**
-> Installing an older version of cookiecutter is required because a regression was introduced in `cookiecutter==2.1.0`.
-
 
 ## Creating a New Project
 
