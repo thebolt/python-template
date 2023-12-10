@@ -41,7 +41,7 @@ Python projects created with the template come pre-configured with an extensive 
 The minimal setup to develop your package is to create a virtual environment and install the package and its runtime requirements:
 
 ```
-python3.9 -m venv venv
+python -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 pip install -e .[dev]
@@ -64,8 +64,8 @@ The tools will automatically pick up the correct configuration from the pyprojec
 
 ### Build the documentation
 
-Run `tox -e docs` to build your documentation with Sphinx straight from your code.
-You can add additional documentation inside the docs/ folder.
+Run `tox run -e docs` to build your documentation with Sphinx straight from your code.
+You can add additional documentation inside the `docs/` folder.
 The pipeline also runs doctests that you added in the documentation (.rst files).
 Doctests inside your code's docstrings are executed by pytest.
 
@@ -76,15 +76,16 @@ Scripts (as opposed to library modules) must therefore be protected by an `if __
 
 ### Build the package
 
-Run `tox -e build` to build your package.
+Run `tox run -e build` to build your package. The resulting wheel and sdist can be found in the `dist` folder.
 
 ## Improving This Template
 
-You need to make the desired changes **in the template**.
-Don't accidentally make your changes in the generated project because those changes will be overridden again.
+You need to make the desired changes **in the template** (the `{{cookiecutter.repo_name}}` folder).
+Don't accidentally make your changes in the generated project (the `cookiecutter-pypackage` folder) because
+those changes will be overridden again.
 Commit your changes so that they are used for the template generation in the next steps.
 Non-committed changes won't be added to the template!
-Run `tox run` to use the template to generate the sample package with your new changes.
+Run `tox run` from the repo's root folder to use the template to generate the sample package with your new changes.
 Change into the generated folder and run `tox run`, `tox run -e docs`, and `tox run -e build` to check that your changes
 work with the sample package.
 (Amend-)commit again and push all changes.
